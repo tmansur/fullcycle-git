@@ -82,11 +82,32 @@ Windows: https://www.gpg4win.org/
   - git config commit.gpgsign true
 
 - Configuração global:
-  - git config--global commit.gpgsign true
+  - git config --global commit.gpgsign true
 
 8. Configurar assinatura das tags como padrão
 
 - git config --global tag.gpgSign true
+
+9. Configurando o agent para não solicitar senha nos commits:
+
+- vim ~/.gnupg/gpg.conf
+  - Incluir: use-agent
+- gpgconf --launch gpg-agent
+
+### Editando chave
+
+1. Abrindo a chave para edição:
+
+- `gpg --edit-key <id-chave>`
+
+2. Incluir informações de identificação que será adicionada a chave
+
+- `adduid`
+
+3. Configurar novo usuário como confiável
+
+- `uid 2`
+- `trust`
 
 ## Pull Requests
 

@@ -32,6 +32,62 @@ Finalizar a correção do bug: `git flow hotfix finish <nome-hotfix>`
 
 ## Git Hub
 
+### Configurando assinatura de commits
+
+Para isso será utilizado o GPG, que normalmente é instalado junto com o git.
+
+Windows: https://www.gpg4win.org/
+
+> [!TIP]
+> Recomenda-se fazer essa configuração utilizando Linux no WSL 2
+
+1. Verificando as chaves existentes
+
+- `gpg --list-secret-key --keyid-form LONG`
+
+2. Gerando uma nova chave
+
+- `gpg --full-generate-key`
+- Parâmetros do processo:
+  - Escolher RSA and RSA (default)
+  - Tamanho: 4096
+  - Tempo de expiração: 1y
+  - Nome: Tiago Mansur
+  - Email: tiago.mansur@hotmail.com
+
+3. Gerando o token público
+
+- `gpg --armor --export <id-chave-gerada>`
+
+4. Configurando Git Hub
+
+- Incluir a chave pública em: **Git Hub | Configurações | SSH and GPG Keys | New GPG Key**
+
+5. Configurando o Git
+
+- `git config --global user.signingkey <id-chave-gerada>`
+
+6. Criação de variavel de ambiente da assinatura
+
+- `export GPG_TTY=$(tty)`
+
+  > [!IMPORTANT]
+  > Deve-se alterar o arquivo que é utilizado ao carregar o terminar e inserir o comando anterior.
+  > Linux: `vim ~/.bash_profile`
+
+7. Configurar assinatura do commit como padrão
+
+- Apenas para o repositório atual:
+
+  - git config commit.gpgsign true
+
+- Configuração global:
+  - git config--global commit.gpgsign true
+
+8. Configurar assinatura das tags como padrão
+
+- git config --global tag.gpgSign true
+
 ## Pull Requests
 
 ## Code Review

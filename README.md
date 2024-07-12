@@ -111,8 +111,56 @@ Windows: https://www.gpg4win.org/
 
 ## Pull Requests
 
+### Extensão
+
+GitHub Pull Requests
+
+![alt text](image.png)
+
 ## Code Review
 
-## SemVer
+### Code Owners
+
+...
+
+## SemVer - Semantic Versioning
+
+https://semver.org/lang/pt-BR/
+
+`MAJOR.MINOR.PATCH`
+
+MAJOR - Versão principal do sistema/Versão da API pública
+
+MINOR - Adicionado funcionalidades, mas compatível com a API
+
+PATCH - Bugs/ajustes
 
 ## Conventional Commits
+
+https://www.conventionalcommits.org/en/v1.0.0/
+
+
+Template:
+
+~~~
+<tipo>[escopo opcional]: <descrição>
+
+[corpo opcional]
+
+[rodapé(s) opcional(is)]
+~~~
+
+Tipos: fix, feat, BREAK CHANGE, build, chore, etc.
+
+### Extensão para VS Code
+
+Conventional Commits
+
+![alt text](image-1.png)
+
+## Commitlint
+
+https://commitlint.js.org/
+
+Ajuda na revisão do padrão estabelecido para os commits.
+

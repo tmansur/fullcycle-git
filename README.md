@@ -79,20 +79,20 @@ Windows: https://www.gpg4win.org/
 
 - Apenas para o repositório atual:
 
-  - git config commit.gpgsign true
+  - `git config commit.gpgsign true`
 
 - Configuração global:
-  - git config --global commit.gpgsign true
+  - `git config --global commit.gpgsign true`
 
 8. Configurar assinatura das tags como padrão
 
-- git config --global tag.gpgSign true
+- `git config --global tag.gpgSign true`
 
 9. Configurando o agent para não solicitar senha nos commits:
 
 - vim ~/.gnupg/gpg.conf
   - Incluir: use-agent
-- gpgconf --launch gpg-agent
+- `gpgconf --launch gpg-agent`
 
 ### Editando chave
 
